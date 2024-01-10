@@ -3,6 +3,7 @@ import org.junit.Test;
 
 import static org.example.RomanNumbers.*;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotEquals;
 /*
 
  So, create a project on a publicly hosted git repository (e.g. github) and implement:
@@ -37,6 +38,14 @@ public class RomanNumbersTest {
 
 
 
+    }
+
+    @Test
+    public void testIntToRomanInvalidCases(){
+        assertNotEquals("CCCC", RomanNumbers.intToRoman(400));
+        assertNotEquals("XIIII", RomanNumbers.intToRoman(14));
+        assertNotEquals("CXVI", RomanNumbers.intToRoman(140));
+        
     }
 
     @Test
