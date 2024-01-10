@@ -23,6 +23,7 @@ import java.util.TreeMap;
  */
 public class RomanNumbers {
     public final static TreeMap<Integer,String> romanNumbers = new TreeMap<>(){{
+        put(0, "");
         put(1, "I");
         put(4, "IV");
         put(5, "V");
@@ -46,7 +47,11 @@ public class RomanNumbers {
     }
 
     public static String intToRoman(int num){
-        return "";
+        int floor = romanNumbers.floorKey(num); //getting floor in the tree, Returns the greatest key less than or equal to the given key
+        if(num == floor){
+            return romanNumbers.get(num); //if floor and nub are equal we just need to return the key, we don't need more iterations
+        }
+        return romanNumbers.get(floor) + intToRoman(num-floor);// we return the current floor and concatenate the result of an iteration less the floor 
     }
     public static int romanToInt(String romanNum){
         return 0;
