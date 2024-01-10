@@ -2,6 +2,7 @@ package org.example;
 
 
 import java.util.HashMap;
+import java.util.TreeMap;
 
 /**
  So, create a project on a publicly hosted git repository (e.g. github) and implement:
@@ -21,7 +22,7 @@ import java.util.HashMap;
  Don't worry about how far you get... we're more interested in you reaching the point of a well factored Part 1 that goes to 100 than a hacked together Part 1 & 2 that goes to 3000.”
  */
 public class RomanNumbers {
-    public final static HashMap<Integer,String> romanNumbers = new HashMap<>(){{
+    public final static TreeMap<Integer,String> romanNumbers = new TreeMap<>(){{
         put(1, "I");
         put(4, "IV");
         put(5, "V");
