@@ -1,3 +1,4 @@
+import org.example.RomanNumbers;
 import org.junit.Test;
 
 import static org.example.RomanNumbers.*;
@@ -25,10 +26,22 @@ import static org.junit.Assert.assertEquals;
 public class RomanNumbersTest {
     @Test
     public void testIntToRoman(){
+    assertEquals("IV", RomanNumbers.intToRoman(4));
+    assertEquals("IV", RomanNumbers.intToRoman(4));
+    assertEquals("", RomanNumbers.intToRoman(0));
+    assertEquals("MC", RomanNumbers.intToRoman(1100));
+    assertEquals("CM", RomanNumbers.intToRoman(900));
+    assertEquals("XCIII", RomanNumbers.intToRoman(93));
+
 
 
     }
 
+    @Test
+    public void testRomanToInt(){
+
+
+    }
 
 
 
