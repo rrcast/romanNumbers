@@ -28,4 +28,7 @@ public class RomanNumbers {
     public static String intToRoman(int num){
         return "";
     }
+    public static int romanToInt(String romanNum){
+        return 0;
+    }
 }

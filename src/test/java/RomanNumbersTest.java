@@ -27,7 +27,7 @@ public class RomanNumbersTest {
     @Test
     public void testIntToRoman(){
     assertEquals("IV", RomanNumbers.intToRoman(4));
-    assertEquals("IV", RomanNumbers.intToRoman(4));
+    assertEquals("XIV", RomanNumbers.intToRoman(14));
     assertEquals("", RomanNumbers.intToRoman(0));
     assertEquals("MC", RomanNumbers.intToRoman(1100));
     assertEquals("CM", RomanNumbers.intToRoman(900));
@@ -39,7 +39,12 @@ public class RomanNumbersTest {
 
     @Test
     public void testRomanToInt(){
-
+        assertEquals(4, RomanNumbers.romanToInt("IV"));
+        assertEquals(14, RomanNumbers.romanToInt("XIV"));
+        assertEquals(0, RomanNumbers.romanToInt(""));
+        assertEquals(1100, RomanNumbers.romanToInt("MC"));
+        assertEquals(900, RomanNumbers.romanToInt("CM"));
+        assertEquals(93, RomanNumbers.romanToInt("XCIII"));
 
     }
 
