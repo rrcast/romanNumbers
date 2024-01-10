@@ -39,15 +39,15 @@ public class RomanNumbers {
         put(1000, "M");
     }};
 
-    public final static HashMap<String,Integer> intValues = new HashMap<>(){{
-        put(" ", 0);
-        put("I", 1);
-        put("V", 2);
-        put("X", 3);
-        put("L", 4);
-        put("C", 5);
-        put("D", 6);
-        put("M", 7);
+    public final static HashMap<Character,Integer> intValues = new HashMap<>(){{
+        put(' ', 0);
+        put('I', 1);
+        put('V', 2);
+        put('X', 3);
+        put('L', 4);
+        put('C', 5);
+        put('D', 6);
+        put('M', 7);
 
     }};
 
