@@ -66,6 +66,21 @@ public class RomanNumbers {
         return romanNumbers.get(floor) + intToRoman(num-floor);// we return the current floor and concatenate the result of an iteration less the floor
     }
     public static int romanToInt(String romanNum){
-        return 0;
+        int result=0;
+        int temp=0;
+        for (int i= romanNum.length()-1; i>=0;i--){
+            int currentNumbe= intValues.get( romanNum.charAt(i));
+            if(currentNumbe<temp){
+                result-=currentNumbe;
+            }else{
+                result += currentNumbe;
+            }
+            temp = currentNumbe;
+        }
+
+
+
+
+        return result;
     }
 }
