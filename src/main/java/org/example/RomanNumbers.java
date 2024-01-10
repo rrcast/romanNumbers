@@ -42,12 +42,12 @@ public class RomanNumbers {
     public final static HashMap<Character,Integer> intValues = new HashMap<>(){{
         put(' ', 0);
         put('I', 1);
-        put('V', 2);
-        put('X', 3);
-        put('L', 4);
-        put('C', 5);
-        put('D', 6);
-        put('M', 7);
+        put('V', 5);
+        put('X', 10);
+        put('L', 50);
+        put('C', 100);
+        put('D', 500);
+        put('M', 1000);
 
     }};
 

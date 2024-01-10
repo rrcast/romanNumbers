@@ -60,7 +60,12 @@ public class RomanNumbersTest {
         assertEquals(93, RomanNumbers.romanToInt("XCIII"));
 
     }
+    @Test
+    public void testRomanToIntInvalidCases(){
+        assertNotEquals(92, RomanNumbers.romanToInt("IXCIII"));
 
+
+    }
 
 
 
