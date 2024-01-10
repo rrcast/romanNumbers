@@ -35,6 +35,8 @@ public class RomanNumbersTest {
     assertEquals("XCIII", RomanNumbers.intToRoman(93));
     assertEquals("MXCIII", RomanNumbers.intToRoman(1093));
     assertEquals("MCMXCIII", RomanNumbers.intToRoman(1993));
+    assertEquals("MMCMXCIX", RomanNumbers.intToRoman(2999));
+    assertEquals("MMM", RomanNumbers.intToRoman(3000));
 
 
 
@@ -45,7 +47,7 @@ public class RomanNumbersTest {
         assertNotEquals("CCCC", RomanNumbers.intToRoman(400));
         assertNotEquals("XIIII", RomanNumbers.intToRoman(14));
         assertNotEquals("CXVI", RomanNumbers.intToRoman(140));
-        
+
     }
 
     @Test
