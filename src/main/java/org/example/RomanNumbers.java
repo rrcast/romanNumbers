@@ -61,10 +61,11 @@ public class RomanNumbers {
     public static String intToRoman(int num){
         int floor = romanNumbers.floorKey(num); //getting floor in the tree, Returns the greatest key less than or equal to the given key
         if(num == floor){
+            //2
             return romanNumbers.get(num); //if floor and nub are equal we just need to return the key, we don't need more iterations
         }
         return romanNumbers.get(floor) + intToRoman(num-floor);// we return the current floor and concatenate the result of an iteration less the floor
-    }
+    }                                           // 2
     public static int romanToInt(String romanNum){
         int result=0;
         int temp=0;
@@ -82,5 +83,20 @@ public class RomanNumbers {
 
 
         return result;
+    }
+
+
+    public static boolean validatePostCode(String romanNum){
+        String[] stringArray = romanNum.split(" ");
+
+
+        if (!stringArray[0].matches("^[a-zA-Z].*")||!stringArray[1].matches("^[1-9].*")) {
+            return false;
+        }
+
+
+
+
+        return true;
     }
 }

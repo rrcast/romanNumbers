@@ -2,8 +2,7 @@ import org.example.RomanNumbers;
 import org.junit.Test;
 
 import static org.example.RomanNumbers.*;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotEquals;
+import static org.junit.Assert.*;
 /*
 
  So, create a project on a publicly hosted git repository (e.g. github) and implement:
@@ -47,6 +46,7 @@ public class RomanNumbersTest {
         assertNotEquals("CCCC", RomanNumbers.intToRoman(400));
         assertNotEquals("XIIII", RomanNumbers.intToRoman(14));
         assertNotEquals("CXVI", RomanNumbers.intToRoman(140));
+        assertNotEquals("IXCIII", RomanNumbers.intToRoman(92));
 
     }
 
@@ -65,6 +65,11 @@ public class RomanNumbersTest {
        // assertNotEquals(92, RomanNumbers.romanToInt("IXCIII")); need to modify logic for this case maybe with a flag to know if we already sum any value to the number we are trying to substract
 
 
+    }
+
+    @Test
+    public void testValidatePostCode(){
+        assertTrue(validatePostCode("Hel 1Wo"));
     }
 
 
