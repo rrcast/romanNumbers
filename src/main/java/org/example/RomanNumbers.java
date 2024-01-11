@@ -88,15 +88,27 @@ public class RomanNumbers {
 
     public static boolean validatePostCode(String romanNum){
         String[] stringArray = romanNum.split(" ");
-
+        String secondPartValidCharacters = "GWLU";
 
         if (!stringArray[0].matches("^[a-zA-Z].*")||!stringArray[1].matches("^[1-9].*")) {
             return false;
         }
 
 
-
+        if(!validateLastPositions(stringArray[1],secondPartValidCharacters)){
+            return false;
+        }
 
         return true;
+    }
+
+    public static boolean validateLastPositions ( String input, String charList){
+        char penultimateChar = input.charAt(1);
+        char lastChar= input.charAt(2);
+            if(charList.contains(""+penultimateChar) &&charList.contains(""+lastChar)){
+                return true;
+            }
+
+        return false;
     }
 }

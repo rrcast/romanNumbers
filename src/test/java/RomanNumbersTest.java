@@ -69,7 +69,8 @@ public class RomanNumbersTest {
 
     @Test
     public void testValidatePostCode(){
-        assertTrue(validatePostCode("Hel 1Wo"));
+        assertTrue(validatePostCode("Hela 1WL"));
+        assertFalse(validatePostCode("Hela 1WA"));
     }
 
 
